@@ -170,9 +170,9 @@ def run(host, FTPfolder, port, login, passwd, LocalFolder, files):
 #keep this to remember the original file.
 '''
 if __name__ == "__main__":
-    logging.basicConfig(filename='/media/fox/Data/TestsYield/log/download.log',format='%(asctime)s %(levelname)s: %(message)s',level=logging.DEBUG)
-    #logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', level=cfg.logging.level)
-    obj = PyFTPclient('141.244.38.20', 'tttcp/SMOOTH_WhittakerBR/MCD13Q1.005', 21,'anonymous' ,'anonymous', '/media/fox/Data/TestsYield/temp/')
-    #obj.DownloadFile('Data_description.tar')
+    #        logging.basicConfig(filename='/var/log/dreamly.log',format='%(asctime)s %(levelname)s: %(message)s',level=logging.DEBUG)
+    logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', level=cfg.logging.level)
+    obj = PyFTPclient('192.168.0.59', 2121, 'test', 'testftp')
+    obj.DownloadFile('USAHD-8974-20131013-0300-0330.ts')
 '''
 
