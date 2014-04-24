@@ -157,9 +157,8 @@ def run(host, FTPfolder, port, login, passwd, LocalFolder, files):
     #logging.basicConfig(filename='/media/fox/Data/TestsYield/log/download.log',format='%(asctime)s %(levelname)s: %(message)s',level=logging.DEBUG)
     #logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', level=logging.level)
 
+
 #uncomment to run the script. 
-
-
 #example
 #in your script:
 #import pyftpclientProgressBar.py as pyftp
