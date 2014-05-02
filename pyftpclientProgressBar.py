@@ -148,9 +148,6 @@ class PyFTPclient:
 
 
 def run(host, FTPfolder, port, login, passwd, LocalFolder, files):
-    '''
-    This function allows this scritp to run as a library
-    '''
     obj = PyFTPclient(host, FTPfolder, port, login, passwd, LocalFolder)
     obj.DownloadFile(files, LocalFolder)
     #Logging doesn't work for me, so I disable it
@@ -168,11 +165,9 @@ def run(host, FTPfolder, port, login, passwd, LocalFolder, files):
 
 
 #keep this to remember the original file.
-'''
 if __name__ == "__main__":
     #        logging.basicConfig(filename='/var/log/dreamly.log',format='%(asctime)s %(levelname)s: %(message)s',level=logging.DEBUG)
     logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', level=cfg.logging.level)
-    obj = PyFTPclient('192.168.0.59', 2121, 'test', 'testftp')
-    obj.DownloadFile('USAHD-8974-20131013-0300-0330.ts')
-'''
+    pyftp.run ('ftp1.cptec.inpe.br', 'modelos/io/tempo/regional/Eta05km/CNEN/ultimo/', 21, 'anonymous', 'anonymous', '/media/Data/temp/', '1404241272_50')
+
 
